@@ -22,7 +22,8 @@ def calculate():
 
         if rank in ranks:
             ori = hurt / (1 - ranks[rank] / 100)
-            result_text.set(f"原始伤害为：{ori}\n{ori / 10 ** 19} 京")
+            print(ori)
+            result_text.set(f"原始伤害为：{ori}\n{ori / 10 ** 16} 京")
         else:
             messagebox.showerror("错误", "无效的减伤等级")
     except ValueError:
@@ -34,7 +35,7 @@ root = tk.Tk()
 root.title("伤害计算器")
 
 # 调整大小
-root.geometry("300x250")
+root.geometry("300x500")
 root.configure(bg='#f2f2f2')
 root.iconbitmap('bg.ico')
 
